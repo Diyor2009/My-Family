@@ -1,0 +1,14 @@
+.main_btn {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 1.4em 2.4em;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+    width: fit-content;
+    font-size: 18px;
+    &:hover {
+        opacity: 0.8 !important;
+    }
+}

@@ -1,0 +1,34 @@
+.blog_main {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: black;
+    .card_title {
+        text-align: center;
+        font-size: 40px;
+        line-height: 8rem;
+    }
+    .responsive_wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        border-bottom: 1px solid black;
+        font-size: 18px;
+    }
+    .img_wrapper {
+        justify-content: center;
+    }
+    .blog_responsive {
+        width: calc((100% - 5vw) /2);
+        height: 82vh;
+        padding: 10px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        img {
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+        }
+    }
+}
