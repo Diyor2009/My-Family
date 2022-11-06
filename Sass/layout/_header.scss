@@ -172,11 +172,18 @@ header {
     gap: 10px;
     justify-content: center;
     align-items: center;
+    background-color: black;
     ul {
         padding: auto !important;
     }
     .active_page {
-        color: #606060;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: rgb(0, 255, 0);
+        border-radius: 6px;
+        a {
+            color: rgb(0, 255, 0);
+        }
     }
     li {
         width: 100%;
@@ -184,28 +191,78 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        transition: 0.3s;
+        border-radius: 6px;
+        &:hover {
+            outline: 1px solid aqua;
+          a {
+              color: aqua;
+          }
+        }
         a {
           font-size: 24px;
           color: #9d9d9d;
-          &:hover {
-            color: black;
-          }
         }
     }
     .collapse {
         ul {
-            background-color: rgba(125,118,118,);
+            margin-top: 4px;
+            background-color: transparent;
+            border-top: none;
+            outline-top: none;
+            border: 1px solid;
+            outline: 2px solid;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            animation-name: shadow;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
             li {
+                padding: 0 0 0 10px;
                 &:hover {
-                    a {
-                        color: black;
-                    }
+                    outline: 1px solid aqua;
+                  a {
+                      color: aqua;
+                  }
                 }
                 a {
                    color: white;
                }
             }
         }
+    }
+}
+
+
+
+
+
+
+@keyframes shadow {
+    0% {
+        border-color: blue;
+        outline-color: blue;
+        box-shadow: 0 4px 18px blue;
+    }
+    25% {
+        border-color: yellow;
+        outline-color: yellow;
+        box-shadow: 0 4px 18px yellow;
+    }
+    50% {
+        border-color: red;
+        outline-color: red;
+        box-shadow: 0 4px 18px red;
+    }
+    75% {
+        border-color: rgb(167, 0, 233);
+        outline-color: rgb(167, 0, 233);
+        box-shadow: 0 4px 18px rgb(167, 0, 233);
+    }
+    100% {
+        border-color: white;
+        outline-color: white;
+        box-shadow: 0 4px 18px white;
     }
 }
 
